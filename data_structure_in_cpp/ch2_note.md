@@ -17,4 +17,4 @@
 
 ## 稀疏矩陣 (Sparse Matrix)
 一個矩陣中，大部分元素為 0
-![](C:/Users/Jack/Downloads/S__13041722.jpg)
+![](2023-02-04-00-31-21.png)
