@@ -7,6 +7,6 @@
 2023.02.24 </br>
 新增：</br>
 1. vscode 與 github 連結以及環境建置
-2. data_structure_in_cpp </br>
+2. data_structure_in_cpp： </br>
    ch2 筆記
 
