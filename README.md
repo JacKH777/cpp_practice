@@ -1,5 +1,7 @@
 # cpp_practice
 
+內容主要為熟悉 cpp 為目的
+
 ## data_structure_in_cpp
 使用課本：圖解資料結構-使用C++
 
