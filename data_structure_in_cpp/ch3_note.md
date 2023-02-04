@@ -51,7 +51,7 @@ Press any key to continue . . .
 
 **ptr1** 會指向 **&s2**，而 **ptr#** 則會指向 **NULL** 表示結束
 
-EX. 考慮以下資料，建立單向串列
+EX. 考慮以下資料，建立單向串列 </br>
 $$
  \begin{bmatrix}
    Num & Name & Score \\
