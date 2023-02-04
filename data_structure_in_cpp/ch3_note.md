@@ -155,4 +155,26 @@ int main(){
     system("pause");
     return 0;
 }
+
+/*
+Num = 1
+Name = A
+Score = 60
+Next num(press q to finish) = 2
+Name = B
+Score = 50
+Next num(press q to finish) = 3
+Name = C
+Score = 80
+Next num(press q to finish) = 4
+Name = D
+Score = 100
+Next num(press q to finish) = q
+all students grade :
+Num : 1 Name : A Score : 60
+Num : 2 Name : B Score : 50
+Num : 3 Name : C Score : 80
+Num : 4 Name : D Score : 100
+請按任意鍵繼續 . . .
+*/
 ```
