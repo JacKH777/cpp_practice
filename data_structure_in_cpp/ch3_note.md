@@ -3,7 +3,7 @@
 ## 3-1-1 and 3-1-2
 配置動態變數與陣列 </br>
 EX. </br>
-```cpp
+```c++
 //Sum Of Array
 #include <iostream>
 
@@ -45,3 +45,6 @@ Press any key to continue . . .
 
 # 3-2 單向串列 (Single Linked List)
 一節點由兩個欄位組成，即資料欄以及指標欄，而指標欄會指出下一個元素的記憶體所在位址。
+
+          s1     -->      s2      -->       s3
+    [data1|ptr1] --> [data2|ptr2] --> [data3|ptr3]
