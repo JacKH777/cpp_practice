@@ -49,7 +49,7 @@ Press any key to continue . . .
          s1      -->      s2      -->      s3
     [data1|ptr1] --> [data2|ptr2] --> [data3|ptr3] --> NULL
 
-**ptr1** 會指向 **&s2**，而 **ptr#** 則會指向 **NULL** 表示結束
+**ptr1** 會指向 **&s2**，而 **ptr3** 則會指向 **NULL** 表示結束
 
 EX. 考慮以下資料，建立單向串列 </br>
 
