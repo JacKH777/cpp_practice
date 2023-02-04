@@ -10,7 +10,7 @@
 2. data_structure_in_cpp： </br>
    ch2 筆記 : 完成
 
-2023.02.03 </br>
+2023.02.04 </br>
 新增：</br>
 1. data_structure_in_cpp： </br>
    ch3 筆記 : 基本 linked list 手刻
