@@ -44,6 +44,8 @@ Press any key to continue . . .
 ```
 
 # 3-2 單向串列 (Single Linked List)
+
+## 3-2-1 單向串列建立
 一節點由兩個欄位組成，即資料欄以及指標欄，而指標欄會指出下一個元素的記憶體所在位址。
 
          s1      -->      s2      -->      s3
@@ -178,3 +180,62 @@ Num : 4 Name : D Score : 100
 請按任意鍵繼續 . . .
 */
 ```
+
+## 3-2-2 單向串列插入新節點
+
+- 插入到第一個節點 </br>
+  新節點的指標指向原來第一個節點，再將串列指標的頭移到新節點
+
+```cpp
+node_new -> next = node_head;
+node_head = node_new;
+```
+
+- 插入到最後一個節點 </br>
+  原本最後一個節點指向新節點，新節點指向 NULL
+
+```cpp
+node_last -> next = node_new;
+node_last = node_new; //node_last 移到最後一位
+node_last -> NULL;
+```
+
+- 插入到中間節點 </br>
+  假設將新節點插入到 X 與 Y 中間，需要將 X 指向新節點，新節點指向 Y 即可
+
+```cpp
+node_X -> next = node_new;
+node_new -> next = node_Y;
+```
+
+## 3-2-3 單向串列刪除節點
+
+- 刪除第一個節點 </br>
+  第一個節點的指標指向第二個節點
+
+```cpp
+node_top = node_head;
+node_head = node_head -> next;
+delete node_top;
+```
+
+- 刪除最後一個節點 </br>
+  原本指向最後一個節點的指標，指向 NULL 即可
+
+```cpp
+node_current -> next = node_last; //node_current 原本指向 node_last
+node_current -> next = NULL;
+delete node_last;
+```
+
+- 刪除中間節點 </br>
+  假設節點原本在 X 與 Y 中間，將 X 指向 Y
+
+```cpp
+node_current = node_X -> next;
+node_X -> next = node_current -> next;
+delete node_current;
+```
+
+## 3-2-4 單向串列反轉
+![Image](https://i.imgur.com/R4R5b9t.png)
