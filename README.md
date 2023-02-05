@@ -16,3 +16,9 @@
 新增：</br>
 1. data_structure_in_cpp： </br>
    ch3 筆記 : 基本 linked list 手刻
+
+2023.02.05 </br>
+新增：</br>
+1. data_structure_in_cpp： </br>
+   ch3 筆記 : linked list插入、刪除、反轉與連結，以及環狀串列的基本
+2. 能夠上傳圖片到 github
