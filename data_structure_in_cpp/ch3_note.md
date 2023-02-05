@@ -240,7 +240,7 @@ delete node_current;
 ## 3-2-4 單向串列反轉與連結
 
 ### 反轉 (invert)
-![Image](https://i.imgur.com/R4R5b9t.png)
+![Image](https://i.imgur.com/R4R5b9t.png) </br>
 程式碼如下：
 ```cpp
 typedef class list{
@@ -297,3 +297,4 @@ A(x) = 3x^2 + 6x -2 可以表示成以下 : </br>
 
 # 3-3 環狀串列 (Circular Linked List)
 
+單向串列具有方向性，若首指標被破壞或是遺失，整個串列都會遺失，且浪費整個串列的記憶體空間，因此考慮 **將最後一個節點指標指向串列首，而不是指向NULL**，其優點是可以從任何一個節點追蹤所有節點，缺點是需要多一個鏈結空間，**環狀鏈結串列走訪與單向的類似，不過檢查串列的結束條件為 ```ptr -> next != head```**
