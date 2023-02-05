@@ -237,5 +237,38 @@ node_X -> next = node_current -> next;
 delete node_current;
 ```
 
-## 3-2-4 單向串列反轉
+## 3-2-4 單向串列反轉與連結
+
+### 反轉 (invert)
 ![Image](https://i.imgur.com/R4R5b9t.png)
+程式碼如下：
+```cpp
+typedef class list{
+    public:
+        int num;
+        char name[10];
+        int score;
+        class list * next;
+}node;
+
+typedef node * link;
+
+link invert(link x){
+    link p, q, r;
+    p = x;
+    q = NULL;
+    
+    while(p != NULL){
+        r = q;
+        q = p;
+        p = p -> next;
+        q -> next = r;
+    }
+
+    return q;
+}
+
+```
+
+### 連結(concatenation)
+若要合併兩個或以上的鏈結串列，只需將首尾相連即可
