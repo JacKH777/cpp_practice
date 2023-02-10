@@ -22,3 +22,8 @@
 1. data_structure_in_cpp： </br>
    ch3 筆記 : linked list插入、刪除、反轉與連結，以及環狀串列的基本
 2. 能夠上傳圖片到 github
+
+2023.02.10 </br>
+新增：</br>
+1. data_structure_in_cpp： </br>
+   ch3 筆記 : 環狀串列以及雙向串列的基本知識

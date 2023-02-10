@@ -359,7 +359,25 @@ delete node_Y; // 刪除 Y
 ## 3-4-1 雙向串列的建立與走訪
 雙向連結的資料結構定義如下： </br>
 
-      [L_Link | Data | R_Link]
+      [L_Link1 | Data1 | R_Link1] -> [L_Link2 | Data2 | R_Link2]
 
 1. 其中 L_Link 指向前一個節點，R_Link 指向下一個節點
 2. 通常加上一個串列首，裡面不儲存任何資料，其 L_Link 指向串列最後一個資料，R_Link 指向第一個節點
+3. 其資料結構如下
+  
+```cpp
+class _NODE{
+  public:
+      int data;
+      class _NODE * LLINK;
+      class _NODE * RLINK;
+}
+```
+其串列走訪方式： </br>
+```cpp
+node_current = node_head -> RLINK;
+while(node_current != NULL){
+    cout << node_current -> data;
+    node_current = node_current -> RLINK;
+}
+```
