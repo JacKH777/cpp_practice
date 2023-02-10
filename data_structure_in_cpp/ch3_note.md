@@ -306,9 +306,9 @@ A(x) = 3x^2 + 6x -2 可以表示成以下 : </br>
 ```cpp
 node_new -> next = node_head;
 node_current = node_head;
-while(node_current -> next != node_head){ //當 next 是 head 時結束
+while(node_current -> next != node_head){ 
     node_current = node_current -> next;
-}
+} //當 next 是 head 時結束
 node_last -> next = node_new;
 node_head = node_new; //head 指向新的首節點
 ```
@@ -320,3 +320,46 @@ node_head = node_new; //head 指向新的首節點
 node_new -> next = node_X -> next;
 node_X -> next = node_new;
 ```
+
+## 3-3-2 環狀串列刪除節點
+有以下兩種情況：
+- 刪除第一個節點 </br>
+  將串列首移至第一個節點，並將最後一個節點的指標指向新串列首
+
+```cpp
+node_current = node_head;
+while(node_current -> next != node_head){
+    node_current = node_current -> next;
+}
+node_last = node_current; //找到最後一個node
+node_current = node_head; //刪除串列首
+node_head = node_head -> next; //指向下一個node
+delete node_current;
+node_last -> next = node_head;
+```
+
+- 刪除中間節點 </br>
+  首先找到要刪除的節點 Y ，先找到 Y 前面一個節點 previous，並將 previous 指向 Y 的下一個節點
+
+```cpp
+node_previous = node_head; //從串列首開始
+while(node_previous -> next != node_Y){ 
+    node_previous  = node_previous -> next;
+} //找到 node_previous
+node_previous -> next = node_Y -> next; //node_previous 指向 Y 的下一個節點
+delete node_Y; // 刪除 Y
+```
+
+## 3-3-3 環狀串列的連結
+更改兩個環狀串列各一個指標即可(使其連在一起)
+
+# 3-4 雙向串列 (Double Linked List)
+單向串列以及環狀串列若有鏈結斷裂，那麼後面的串列資料都會遺失而無法復原，因此可以**使用兩個不同方向的指標，一個指向前面節點，一個指向下一個節點**，其優點是可以從任一節點找到其他節點，而不需要經過反轉，執行速度較快，若一端鏈結斷裂，可經由反方向串列走訪，快速完整的重建鏈結，缺點則是較為浪費空間。
+
+## 3-4-1 雙向串列的建立與走訪
+雙向連結的資料結構定義如下： </br>
+
+      [L_Link | Data | R_Link]
+
+1. 其中 L_Link 指向前一個節點，R_Link 指向下一個節點
+2. 通常加上一個串列首，裡面不儲存任何資料，其 L_Link 指向串列最後一個資料，R_Link 指向第一個節點
