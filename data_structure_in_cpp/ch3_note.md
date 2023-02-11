@@ -381,3 +381,22 @@ while(node_current != NULL){
     node_current = node_current -> RLINK;
 }
 ```
+
+## 3-4-2 雙向串列插入節點
+有以下三種情況：
+- 將新節點加入此串列的第一個節點前
+
+```cpp
+node_new -> RLINK = node_head; //node_new 的 RLINK 指向原本的第一個
+node_head -> LLINK = node_new; //原本的串列首指向新節點
+node_head = node_new; //node_head 重新指向串列首
+```
+
+- 將新節點加入此串列的最後
+
+```cpp
+node_new -> RLINK = NULL; //node_new 的 RLINK 指向NULL
+node_new -> LLINK = node_last; 
+node_last -> RLINK = node_new; //原本的串列尾指向新節點
+node_last = node_new; //node_last 重新指向串列尾
+```
