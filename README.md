@@ -27,3 +27,8 @@
 新增：</br>
 1. data_structure_in_cpp： </br>
    ch3 筆記 : 環狀串列以及雙向串列的基本知識
+
+2023.02.11 </br>
+新增：</br>
+1. data_structure_in_cpp： </br>
+   ch3 筆記 : 雙向串列的插入
