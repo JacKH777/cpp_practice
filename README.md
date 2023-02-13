@@ -32,3 +32,8 @@
 新增：</br>
 1. data_structure_in_cpp： </br>
    ch3 筆記 : 雙向串列的插入
+
+2023.02.13 </br>
+新增：</br>
+1. data_structure_in_cpp： </br>
+   ch3 筆記 : 完成

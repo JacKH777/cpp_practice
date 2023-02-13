@@ -400,3 +400,41 @@ node_new -> LLINK = node_last;
 node_last -> RLINK = node_new; //原本的串列尾指向新節點
 node_last = node_new; //node_last 重新指向串列尾
 ```
+
+- 將新節點加入此串列的某一節點 ptr 之後
+
+```cpp
+node_new -> RLINK = ptr -> RLINK; //node_new 的 RLINK 指向 ptr 的下一個節點
+node_new -> LLINK = ptr; 
+ptr -> RLINK = node_new; //ptr 指向新節點
+```
+
+## 3-4-3 雙向串列刪除節點
+有以下三種情況：
+
+- 刪除第一個節點
+  
+```cpp
+node_delete = node_head;
+node_head = node_head -> RLINK; 
+node_head -> LLINK = NULL;
+delete node_delete;
+```  
+
+- 刪除最後一個節點
+
+```cpp
+node_delete = node_last;
+node_last = node_last -> LLINK; 
+node_last -> RLINK = NULL;
+delete node_delete;
+```  
+
+- 刪除中間節點 ptr
+
+```cpp
+node_delete = node_ptr;
+node_ptr -> LLINK -> RLINK = node_ptr -> RLINK; 
+node_ptr -> RLINK -> LLINK = node_ptr -> LLINK; //記得要指回去
+delete node_delete;
+```  
